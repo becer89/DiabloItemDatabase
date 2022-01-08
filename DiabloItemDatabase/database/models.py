@@ -6,6 +6,8 @@ from django.utils import timezone
 
 class Item(models.Model):
     name = models.CharField(max_length=200)
+    published_date = models.DateTimeField(
+        blank=True, null=True)
 
     def publish(self):
         self.published_date = timezone.now()
@@ -13,3 +15,5 @@ class Item(models.Model):
 
     def __str__(self):
         return self.name
+
+

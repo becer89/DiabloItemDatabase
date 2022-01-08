@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for item in items %}
+    <div>
+        <p>item: {{item.name}}
+        <p>added: {{item.published_date|linebreaksbr}}
+    </div>
+{% endfor %}
+
+
+</body>
+</html>
